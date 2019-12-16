@@ -29,9 +29,9 @@ namespace SomeRandomApp
         }
         private void SetRngProps()
         {
+            Thread.Sleep(100);
             BouncingButton.Height = rng.Next(25, 100);
             BouncingButton.Width = rng.Next(50, 150);
-            Thread.Sleep(100);
             BouncingButton.Location = new Point(rng.Next(0 + BouncingButton.Width, MainPanel.Width - BouncingButton.Width),
                 rng.Next(0 + BouncingButton.Height, MainPanel.Height - BouncingButton.Height));
             BouncingButton.Text = words[rng.Next(0, words.Length - 1)];
